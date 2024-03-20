@@ -1,0 +1,53 @@
+
+<html>
+<head>
+	<title>Language App by Khushali</title>
+	<style>
+		*{ font-size:50px; }
+		h1{ background-color:black; color:white; width:50%; border-radius:40px; }
+		body{ background-color:light yellow; }
+                input[type=checkbox] { width:3%; height:0.5em; }
+	</style>
+</head>
+<body>
+<center>
+	<h1> Language You Know </h1>
+	<form onsubmit="show()">
+		<input type="text" placeholder="enter name" id="name" />
+		<br><br>
+		<input type="checkbox" id="js" />JavaScript
+		<input type="checkbox" id="ja" />Java
+		<input type="checkbox" id="py" checked=true/>Python
+		<br><br>
+		<input type="submit" />
+	</form>
+	<h2 id="msg" />
+
+	<script>
+		function show()
+		{
+			event.preventDefault();
+			let name=document.getElementById("name");
+			let gj=document.getElementById("js");
+			let rg=document.getElementById("ja");
+			let ca=document.getElementById("py");
+			let msg=document.getElementById("msg");  
+                                                         
+			let lang= "";
+			if(js.checked)			lang +="JavaScript ";
+			if(ja.checked)			lang +="Java ";
+			if(py.checked)			lang +="Python ";
+
+			let ans="name = "+name.value+" lang= "+lang ;
+			msg.innerHTML=ans;
+		}
+	</script>
+</center>
+</body>
+</html> 
+
+
+
+
+
+															
